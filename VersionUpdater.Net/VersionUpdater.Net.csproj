@@ -40,7 +40,7 @@
     <Description> .Net winforms auto updater with github actions. </Description>
     <PackageTags>version, updater, .net, github updater, auto updater</PackageTags>
     <Copyright>Emre Sever</Copyright>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <PackageIcon>VersionUpdaterLogo.png</PackageIcon>
     
   </PropertyGroup>
