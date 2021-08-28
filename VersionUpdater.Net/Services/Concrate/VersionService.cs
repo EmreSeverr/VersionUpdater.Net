@@ -103,14 +103,13 @@ namespace VersionUpdater.Net.Services.Concrate
                     client.DownloadFile(_latestRelease?.Url ?? throw new UpdaterException("Cannot find release url."), _zipFileName);
                 }
 
+                DeleteBakFiles();
+
                 FileMove(Directory.GetFiles(@"."));
 
                 var zipFileDirectory = Path.Combine(_startupPath, _zipFileName);
 
                 ZipFile.ExtractToDirectory(zipFileDirectory, @".", true);
-
-                DeleteBakFiles();
-                DeleteZipFile();
 
                 loadingFunction.Close();
 
