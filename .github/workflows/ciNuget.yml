@@ -7,6 +7,9 @@ on:
  pull_request:
     branches: [ master ]
 
+env:
+  PROJECT_PATH: VersionUpdater.Net/VersionUpdater.Net.csproj
+
 jobs:
   build:
 
@@ -19,11 +22,11 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore ${{ env.PROJECT_PATH }}
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build ${{ env.PROJECT_PATH }} --configuration Release --no-restore
     - name: Publish NuGet
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:   
-       PROJECT_FILE_PATH: VersionUpdater.Net/VersionUpdater.Net.csproj  
+       PROJECT_FILE_PATH: ${{ env.PROJECT_PATH }}
        NUGET_KEY: ${{secrets.NUGET_API_KEY}} 
