@@ -105,7 +105,9 @@ namespace VersionUpdater.Net.Services.Concrate
 
                 FileMove(Directory.GetFiles(@"."));
 
-                ZipFile.ExtractToDirectory(_startupPath, @".", true);
+                var zipFileDirectory = Path.Combine(_startupPath, _zipFileName);
+
+                ZipFile.ExtractToDirectory(zipFileDirectory, @".", true);
 
                 DeleteBakFiles();
                 DeleteZipFile();
@@ -128,14 +130,12 @@ namespace VersionUpdater.Net.Services.Concrate
         /// <param name="fileEntries"></param>
         private static void FileMove(string[] fileEntries)
         {
-            fileEntries = fileEntries.Where(p => !p.Contains(".zip")).ToArray();
-
-            var otherFiles = fileEntries.Where(p => !p.Contains(".bak")).ToList();
+            var otherFiles = fileEntries.Where(p => !p.Contains(".bak") && !p.Contains(".zip")).ToList();
 
             foreach (var filePath in otherFiles)
             {
                 string normalFiles = filePath;
-                string newFiles = @$".\{GetPureFileName(filePath)}.bak";
+                string newFiles = @$".\{Path.GetFileName(filePath)}.bak";
 
                 if (!File.Exists(normalFiles))
                 {
@@ -144,8 +144,6 @@ namespace VersionUpdater.Net.Services.Concrate
 
                 File.Move(normalFiles, newFiles, true);
             }
-
-            static string GetPureFileName(string fileName) => Path.GetFileName(fileName);
         }
 
         /// <summary>

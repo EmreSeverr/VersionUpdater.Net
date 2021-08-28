@@ -37,7 +37,7 @@ namespace VersionUpdater.Net.Helpers
         /// </summary>
         /// <param name="githubAuthenticationType"></param>
         /// <returns></returns>
-        public static AuthenticationType GetAuthenticationType(this GithubAuthenticationType githubAuthenticationType)
+        internal static AuthenticationType GetAuthenticationType(this GithubAuthenticationType githubAuthenticationType)
         {
             switch (githubAuthenticationType)
             {
