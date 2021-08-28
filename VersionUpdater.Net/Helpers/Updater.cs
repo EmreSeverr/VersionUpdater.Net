@@ -11,7 +11,7 @@ namespace VersionUpdater.Net.Helpers
     /// <summary>
     /// Extensions class for VersionUpdater.Net
     /// </summary>
-    public static class VersionUpdater
+    public static class Updater
     {
         /// <summary>
         /// Configures VersionUpdater.Net.
