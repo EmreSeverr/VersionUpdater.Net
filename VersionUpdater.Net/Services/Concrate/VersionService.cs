@@ -118,6 +118,8 @@ namespace VersionUpdater.Net.Services.Concrate
             }
             catch (Exception exception)
             {
+                loadingFunction.Close();
+
                 MessageBox.Show(exception.ToString());
             }
 
@@ -134,15 +136,14 @@ namespace VersionUpdater.Net.Services.Concrate
 
             foreach (var filePath in otherFiles)
             {
-                string normalFiles = filePath;
                 string newFiles = @$".\{Path.GetFileName(filePath)}.bak";
 
-                if (!File.Exists(normalFiles))
+                if (!File.Exists(filePath))
                 {
-                    using (FileStream fs = File.Create(normalFiles)) { }
+                    using (FileStream fs = File.Create(filePath)) { }
                 }
 
-                File.Move(normalFiles, newFiles, true);
+                File.Move(filePath, newFiles, true);
             }
         }
 
@@ -159,7 +160,10 @@ namespace VersionUpdater.Net.Services.Concrate
         private void DeleteZipFile()
         {
             foreach (var file in Directory.GetFiles(_startupPath).Where(p => p.Contains(_zipFileName)))
+            {
+                File.SetAttributes(file, FileAttributes.Normal);
                 File.Delete(file);
+            }
         }
 
         /// <summary>
@@ -168,7 +172,10 @@ namespace VersionUpdater.Net.Services.Concrate
         private void DeleteBakFiles()
         {
             foreach (var bakFile in Directory.GetFiles(_startupPath).Where(p => p.Contains(".bak")))
+            {
+                File.SetAttributes(bakFile, FileAttributes.Normal);
                 File.Delete(bakFile);
+            }
         }
 
         /// <summary>
