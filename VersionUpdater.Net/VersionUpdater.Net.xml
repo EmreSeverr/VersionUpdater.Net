@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VersionUpdater.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VersionUpdater.Net.Helpers.Exceptions.UpdaterException">
+            <summary>
+            Exception class for updater.
+            </summary>
+        </member>
+        <member name="M:VersionUpdater.Net.Helpers.Exceptions.UpdaterException.#ctor(System.String)">
+            <summary>
+            Constructor of <see cref="T:VersionUpdater.Net.Helpers.Exceptions.UpdaterException"/>.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="F:VersionUpdater.Net.Helpers.Forms.Loader.Loading.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VersionUpdater.Net.Helpers.Forms.Loader.Loading.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VersionUpdater.Net.Helpers.Forms.Loader.Loading.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:VersionUpdater.Net.Helpers.Forms.UpdateMessageForm">
+            <summary>
+            If there is an update, the form that will appear.
+            </summary>
+        </member>
+        <member name="M:VersionUpdater.Net.Helpers.Forms.UpdateMessageForm.#ctor">
+            <summary>
+            Constructor of <see cref="T:VersionUpdater.Net.Helpers.Forms.UpdateMessageForm"/>.
+            </summary>
+        </member>
+        <member name="F:VersionUpdater.Net.Helpers.Forms.UpdateMessageForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VersionUpdater.Net.Helpers.Forms.UpdateMessageForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VersionUpdater.Net.Helpers.Forms.UpdateMessageForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:VersionUpdater.Net.Helpers.VersionUpdater">
+            <summary>
+            Extensions class for VersionUpdater.Net
+            </summary>
+        </member>
+        <member name="M:VersionUpdater.Net.Helpers.VersionUpdater.ApplyVersionUpdaterAsync(System.Action{VersionUpdater.Net.Models.VersionUpdaterProps})">
+            <summary>
+            Configures VersionUpdater.Net.
+            </summary>
+            <param name="updaterConAction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VersionUpdater.Net.Helpers.VersionUpdater.GetAuthenticationType(VersionUpdater.Net.Helpers.Enums.GithubAuthenticationType)">
+            <summary>
+            Returns authentication type for octakit.
+            </summary>
+            <param name="githubAuthenticationType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VersionUpdater.Net.Models.VersionUpdaterProps">
+            <summary>
+            Requirement properties for VersionUpdater.Net.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Models.VersionUpdaterProps.RepositoryName">
+            <summary>
+            Repository name.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Models.VersionUpdaterProps.Owner">
+            <summary>
+            Owner name.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Models.VersionUpdaterProps.GithubToken">
+            <summary>
+            Github token.
+            
+            <para> If your repository is private. You must set this property. </para>
+            
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Models.VersionUpdaterProps.GithubAuthenticationType">
+            <summary>
+            Github authentication type.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Models.VersionUpdaterProps.Version">
+            <summary>
+            Current version.
+            </summary>
+        </member>
+        <member name="T:VersionUpdater.Net.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Properties.Resources.LaterButton_En">
+            <summary>
+              Looks up a localized string similar to Later.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Properties.Resources.LaterButton_Tr">
+            <summary>
+              Looks up a localized string similar to Sonra.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Properties.Resources.LoadingMessage_En">
+            <summary>
+              Looks up a localized string similar to Loading....
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Properties.Resources.LoadingMessage_Tr">
+            <summary>
+              Looks up a localized string similar to Yükleniyor....
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Properties.Resources.NewUpdateMessage_En">
+            <summary>
+              Looks up a localized string similar to Update Available.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Properties.Resources.NewUpdateMessage_Tr">
+            <summary>
+              Looks up a localized string similar to Güncelleme Mevcut.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Properties.Resources.UpdateButton_En">
+            <summary>
+              Looks up a localized string similar to Update.
+            </summary>
+        </member>
+        <member name="P:VersionUpdater.Net.Properties.Resources.UpdateButton_Tr">
+            <summary>
+              Looks up a localized string similar to Güncelle.
+            </summary>
+        </member>
+        <member name="T:VersionUpdater.Net.Services.Abstract.IVersionService">
+            <summary>
+            Class of version service.
+            </summary>
+        </member>
+        <member name="M:VersionUpdater.Net.Services.Abstract.IVersionService.CheckHaveUpdateAsync">
+            <summary>
+            Checks for new updates.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VersionUpdater.Net.Services.Concrate.VersionService">
+            <summary>
+            Class of version service.
+            </summary>
+        </member>
+        <member name="M:VersionUpdater.Net.Services.Concrate.VersionService.#ctor(VersionUpdater.Net.Models.VersionUpdaterProps)">
+            <summary>
+            Constructor of <see cref="T:VersionUpdater.Net.Services.Concrate.VersionService"/>.
+            </summary>
+            <param name="updaterCon"></param>
+        </member>
+        <member name="M:VersionUpdater.Net.Services.Concrate.VersionService.CheckHaveUpdateAsync">
+            <summary>
+            Checks for new updates.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VersionUpdater.Net.Services.Concrate.VersionService.RestartApplication">
+            <summary>
+            Restart application.
+            </summary>
+        </member>
+        <member name="M:VersionUpdater.Net.Services.Concrate.VersionService.UpdateApplication(System.Object,System.EventArgs)">
+            <summary>
+            Updates application
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VersionUpdater.Net.Services.Concrate.VersionService.FileMove(System.String[])">
+            <summary>
+            Files moves for update operation.
+            </summary>
+            <param name="fileEntries"></param>
+        </member>
+        <member name="M:VersionUpdater.Net.Services.Concrate.VersionService.LaterUpdateApplication(System.Object,System.EventArgs)">
+            <summary>
+            Later update function.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VersionUpdater.Net.Services.Concrate.VersionService.DeleteZipFile">
+            <summary>
+            Delete downloading zip file.
+            </summary>
+        </member>
+        <member name="M:VersionUpdater.Net.Services.Concrate.VersionService.DeleteBakFiles">
+            <summary>
+            Deletes bak files.
+            </summary>
+        </member>
+        <member name="M:VersionUpdater.Net.Services.Concrate.VersionService.GetVersionAndUpdateRequirement(System.Collections.Generic.IReadOnlyList{Octokit.Release})">
+            <summary>
+            Find github version, update requirement and latest.
+            </summary>
+            <param name="releases"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

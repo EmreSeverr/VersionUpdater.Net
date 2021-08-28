@@ -4,7 +4,9 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
-    <Version>1.0.0</Version>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+    <PackageIcon>VersionUpdaterLogo.png</PackageIcon>
     <Win32Resource></Win32Resource>
   </PropertyGroup>
 
@@ -13,6 +15,36 @@
     <PackageReference Include="Octokit" Version="0.50.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Milvasoft.Helpers.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\VersionUpdaterLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\VersionUpdaterLogo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <PropertyGroup>
+
+    <PackageId>VersionUpdater.Net</PackageId>
+    <RepositoryUrl>https://github.com/EmreSeverr/VersionUpdater.Net/tree/master/VersionUpdater.Net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/EmreSeverr/VersionUpdater.Net/tree/master/VersionUpdater.Net</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Emre Sever</Authors>
+    <Product>VersionUpdater.Net</Product>
+    <Description> .Net winforms auto updater with github actions. </Description>
+    <PackageTags>version, updater, .net, github updater, auto updater</PackageTags>
+    <Copyright>Emre Sever</Copyright>
+    <Version>1.0.1</Version>
+    <PackageIcon>VersionUpdaterLogo.png</PackageIcon>
+    
+  </PropertyGroup>
+  
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>

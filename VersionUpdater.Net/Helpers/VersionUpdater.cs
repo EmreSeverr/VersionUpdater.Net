@@ -6,12 +6,12 @@ using VersionUpdater.Net.Models;
 using VersionUpdater.Net.Services.Abstract;
 using VersionUpdater.Net.Services.Concrate;
 
-namespace VersionUpdater.Net.Helpers.Extensions
+namespace VersionUpdater.Net.Helpers
 {
     /// <summary>
     /// Extensions class for VersionUpdater.Net
     /// </summary>
-    public static class VersionUpdaterExtensions
+    public static class VersionUpdater
     {
         /// <summary>
         /// Configures VersionUpdater.Net.
@@ -30,6 +30,8 @@ namespace VersionUpdater.Net.Helpers.Extensions
             await versionService.CheckHaveUpdateAsync().ConfigureAwait(false);
         }
 
+        #region Extensions
+
         /// <summary>
         /// Returns authentication type for octakit.
         /// </summary>
@@ -47,5 +49,7 @@ namespace VersionUpdater.Net.Helpers.Extensions
                     return AuthenticationType.Anonymous;
             }
         }
+
+        #endregion
     }
 }
