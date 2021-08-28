@@ -20,7 +20,7 @@ namespace VersionUpdater.Net.Services.Concrate
     /// <summary>
     /// Class of version service.
     /// </summary>
-    public class VersionService : IVersionService
+    internal class VersionService : IVersionService
     {
         private readonly VersionUpdaterProps _updaterCon;
         private UpdateMessageForm? _updateMessageForm;
@@ -36,7 +36,7 @@ namespace VersionUpdater.Net.Services.Concrate
         {
             _updaterCon = updaterCon;
             _startupPath = System.Windows.Forms.Application.StartupPath;
-            _zipFileName = "release.zip";
+            _zipFileName = "newRelease.zip";
         }
 
         /// <summary>

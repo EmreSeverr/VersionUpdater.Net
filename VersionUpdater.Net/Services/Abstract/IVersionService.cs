@@ -5,7 +5,7 @@ namespace VersionUpdater.Net.Services.Abstract
     /// <summary>
     /// Class of version service.
     /// </summary>
-    public interface IVersionService
+    internal interface IVersionService
     {
         /// <summary>
         /// Checks for new updates.

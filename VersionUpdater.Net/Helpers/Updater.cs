@@ -1,5 +1,6 @@
 ﻿using Octokit;
 using System;
+using System.Net.Sockets;
 using System.Threading.Tasks;
 using VersionUpdater.Net.Helpers.Enums;
 using VersionUpdater.Net.Models;
@@ -26,8 +27,29 @@ namespace VersionUpdater.Net.Helpers
 
             updaterCon.Version = Version.Parse(System.Windows.Forms.Application.ProductVersion);
 
-            IVersionService versionService = new VersionService(updaterCon);
-            await versionService.CheckHaveUpdateAsync().ConfigureAwait(false);
+            if (CheckNetworkConnection())
+            {
+                IVersionService versionService = new VersionService(updaterCon);
+                await versionService.CheckHaveUpdateAsync().ConfigureAwait(false);
+            }
+        }
+
+        /// <summary>
+        /// Provides information about whether the device is connected to the internet.
+        /// </summary>
+        /// <returns></returns>
+        public static bool CheckNetworkConnection()
+        {
+            try
+            {
+                TcpClient tcpClient = new TcpClient("www.google.com.tr", 80);
+                tcpClient.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         #region Extensions
