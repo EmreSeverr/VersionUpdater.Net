@@ -5,6 +5,7 @@
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/EmreSeverr/VersionUpdater.Net/blob/master/LICENSE) 
 [![NuGet](https://img.shields.io/nuget/v/VersionUpdater.Net)](https://www.nuget.org/packages/VersionUpdater.Net/) 
 [![NuGet](https://img.shields.io/nuget/dt/VersionUpdater.Net)](https://www.nuget.org/packages/VersionUpdater.Net/) 
+[![Nuget Package](https://github.com/EmreSeverr/VersionUpdater.Net/actions/workflows/ciNuget.yml/badge.svg?branch=master)](https://github.com/EmreSeverr/VersionUpdater.Net/actions/workflows/ciNuget.yml)
 
 </div>
 
