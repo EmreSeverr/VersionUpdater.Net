@@ -33,9 +33,9 @@
   <PropertyGroup>
 
     <PackageId>VersionUpdater.Net</PackageId>
-    <RepositoryUrl>https://github.com/EmreSeverr/VersionUpdater.Net/tree/master/VersionUpdater.Net</RepositoryUrl>
+    <RepositoryUrl>https://github.com/EmreSeverr/VersionUpdater.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/EmreSeverr/VersionUpdater.Net/tree/master/VersionUpdater.Net</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/EmreSeverr/VersionUpdater.Net</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Emre Sever</Authors>
     <Product>VersionUpdater.Net</Product>
