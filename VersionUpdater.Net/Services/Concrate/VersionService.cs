@@ -22,11 +22,12 @@ namespace VersionUpdater.Net.Services.Concrate
     /// </summary>
     internal class VersionService : IVersionService
     {
-        private readonly VersionUpdaterProps _updaterCon;
         private UpdateMessageForm? _updateMessageForm;
         private ReleaseAsset? _latestRelease;
+        private bool _updateRequirement;
         private readonly string _startupPath;
         private readonly string _zipFileName;
+        private readonly VersionUpdaterProps _updaterCon;
 
         /// <summary>
         /// Constructor of <see cref="VersionService"/>.
@@ -58,6 +59,7 @@ namespace VersionUpdater.Net.Services.Concrate
             (Version githubVersion, bool updateRequirement, ReleaseAsset latestRelease) = GetVersionAndUpdateRequirement(releases);
 
             _latestRelease = latestRelease;
+            _updateRequirement = updateRequirement;
 
             if (githubVersion > _updaterCon.Version)
             {
@@ -85,7 +87,11 @@ namespace VersionUpdater.Net.Services.Concrate
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void FormClosingEvent(object? sender, EventArgs e) => RestartApplication();
+        public void FormClosingEvent(object? sender, EventArgs e)
+        {
+            if (_updateRequirement)
+                System.Windows.Forms.Application.Exit();
+        }
 
         /// <summary>
         /// Updates application
