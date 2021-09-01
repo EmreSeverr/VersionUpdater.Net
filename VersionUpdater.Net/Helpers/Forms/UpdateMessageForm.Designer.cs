@@ -46,18 +46,18 @@ namespace VersionUpdater.Net.Helpers.Forms
             // 
             // buttonUpdate
             // 
+            resources.ApplyResources(this.buttonUpdate, "buttonUpdate");
             this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(105)))), ((int)(((byte)(242)))));
             this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.buttonUpdate, "buttonUpdate");
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             // 
             // buttonUpdateLater
             // 
+            resources.ApplyResources(this.buttonUpdateLater, "buttonUpdateLater");
             this.buttonUpdateLater.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.buttonUpdateLater.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.buttonUpdateLater, "buttonUpdateLater");
             this.buttonUpdateLater.ForeColor = System.Drawing.Color.White;
             this.buttonUpdateLater.Name = "buttonUpdateLater";
             this.buttonUpdateLater.UseVisualStyleBackColor = false;
