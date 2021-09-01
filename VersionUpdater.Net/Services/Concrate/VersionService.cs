@@ -64,6 +64,7 @@ namespace VersionUpdater.Net.Services.Concrate
                 _updateMessageForm = new();
                 _updateMessageForm.buttonUpdateLater.Click += new EventHandler(LaterUpdateApplication);
                 _updateMessageForm.buttonUpdate.Click += new EventHandler(UpdateApplication);
+                _updateMessageForm.FormClosing += new FormClosingEventHandler(FormClosingEvent);
 
                 if (updateRequirement)
                     _updateMessageForm.buttonUpdateLater.Visible = false;
@@ -78,6 +79,13 @@ namespace VersionUpdater.Net.Services.Concrate
         /// Restart application.
         /// </summary>
         private static void RestartApplication() => System.Windows.Forms.Application.Restart();
+
+        /// <summary>
+        /// Form closing event function.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void FormClosingEvent(object? sender, EventArgs e) => RestartApplication();
 
         /// <summary>
         /// Updates application

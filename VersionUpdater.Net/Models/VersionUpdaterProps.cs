@@ -1,4 +1,5 @@
 ﻿using System;
+using VersionUpdater.Net.Helpers.CronJob.Models.Abstract;
 using VersionUpdater.Net.Helpers.Enums;
 
 namespace VersionUpdater.Net.Models
@@ -30,6 +31,14 @@ namespace VersionUpdater.Net.Models
         /// Github authentication type.
         /// </summary>
         public GithubAuthenticationType GithubAuthenticationType { get; set; }
+
+        /// <summary>
+        /// Settings for which time interval update check is performed while your application is running.
+        /// 
+        /// <para> If you not set this property, the update check is not performed at runtime. </para>
+        /// 
+        /// </summary>
+        public IScheduleConfig? ScheduleConfig { get; set; }
 
         /// <summary>
         /// Current version.

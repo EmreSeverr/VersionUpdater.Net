@@ -11,7 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Cronos" Version="0.7.1" />
     <PackageReference Include="MetroFramework" Version="1.2.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
     <PackageReference Include="Octokit" Version="0.50.0" />
   </ItemGroup>
 
@@ -40,7 +42,7 @@
     <Description> .Net winforms auto updater with github actions. </Description>
     <PackageTags>version, updater, .net, github updater, auto updater</PackageTags>
     <Copyright>Emre Sever</Copyright>
-    <Version>1.0.6</Version>
+    <Version>1.1.0</Version>
     <PackageIcon>VersionUpdaterLogo.png</PackageIcon>
     
   </PropertyGroup>

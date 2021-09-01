@@ -1,8 +1,12 @@
 ﻿using Octokit;
 using System;
 using System.Net.Sockets;
+using System.Threading;
 using System.Threading.Tasks;
+using VersionUpdater.Net.Helpers.CronJob;
+using VersionUpdater.Net.Helpers.CronJob.Models.Abstract;
 using VersionUpdater.Net.Helpers.Enums;
+using VersionUpdater.Net.Helpers.Exceptions;
 using VersionUpdater.Net.Models;
 using VersionUpdater.Net.Services.Abstract;
 using VersionUpdater.Net.Services.Concrate;
@@ -31,6 +35,15 @@ namespace VersionUpdater.Net.Helpers
             {
                 IVersionService versionService = new VersionService(updaterCon);
                 await versionService.CheckHaveUpdateAsync().ConfigureAwait(false);
+
+                if (updaterCon.ScheduleConfig != null)
+                {
+                    updaterCon.ScheduleConfig.CheckCronJobParameters();
+
+                    CronJobUpdate cronJobUpdate = new(updaterCon.ScheduleConfig, versionService.CheckHaveUpdateAsync);
+
+                    await cronJobUpdate.StartAsync(new CancellationToken()).ConfigureAwait(false);
+                }
             }
         }
 
@@ -70,6 +83,16 @@ namespace VersionUpdater.Net.Helpers
                 default:
                     return AuthenticationType.Anonymous;
             }
+        }
+
+        /// <summary>
+        /// checks whether <see cref="IScheduleConfig.CronExpression"/> is valid.
+        /// </summary>
+        /// <param name="scheduleConfig"></param>
+        private static void CheckCronJobParameters(this IScheduleConfig scheduleConfig)
+        {
+            if (string.IsNullOrWhiteSpace(scheduleConfig.CronExpression))
+                throw new UpdaterException("Empty Cron Expression is not allowed.");
         }
 
         #endregion
