@@ -118,5 +118,10 @@ namespace VersionUpdater.Net.Helpers.Forms
             this.ControlBox = false;
             this.Resizable = false;
         }
+
+        private void labelViewUpdateNotes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
