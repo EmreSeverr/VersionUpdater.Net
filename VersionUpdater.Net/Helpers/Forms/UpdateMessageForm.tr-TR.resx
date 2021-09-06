@@ -94,7 +94,7 @@
     <value>Times New Roman, 9.75pt</value>
   </data>
   <data name="labelViewUpdateNotes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 296</value>
+    <value>83, 297</value>
   </data>
   <data name="labelViewUpdateNotes.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 15</value>
@@ -103,10 +103,6 @@
     <value>Güncelleme Notları</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>278, 341</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>285, 337</value>
   </data>
 </root>
