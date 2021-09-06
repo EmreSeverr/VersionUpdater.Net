@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace VersionUpdater.Net.Services.Abstract
 {
@@ -11,6 +12,6 @@ namespace VersionUpdater.Net.Services.Abstract
         /// Checks for new updates.
         /// </summary>
         /// <returns></returns>
-        Task CheckHaveUpdateAsync();
+        Task<List<string>> CheckHaveUpdateAsync();
     }
 }

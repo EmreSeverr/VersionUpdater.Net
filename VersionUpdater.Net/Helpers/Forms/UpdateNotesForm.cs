@@ -1,14 +1,12 @@
 ﻿using MetroFramework.Forms;
 using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace VersionUpdater.Net.Helpers.Forms
 {
-    /// <summary>
-    /// If there is an update, the form that will appear.
-    /// </summary>
-    public partial class UpdateMessageForm : MetroForm
+    public partial class UpdateNotesForm : MetroForm
     {
         #region Shadow Settings
 
@@ -106,10 +104,7 @@ namespace VersionUpdater.Net.Helpers.Forms
 
         #endregion
 
-        /// <summary>
-        /// Constructor of <see cref="UpdateMessageForm"/>.
-        /// </summary>
-        internal UpdateMessageForm()
+        internal UpdateNotesForm(List<string> updateNotes)
         {
             m_aeroEnabled = false;
 
@@ -117,6 +112,15 @@ namespace VersionUpdater.Net.Helpers.Forms
 
             this.ControlBox = false;
             this.Resizable = false;
+
+            foreach (var note in updateNotes)
+            {
+                richTextBoxUpdateNotes.Text += note;
+                richTextBoxUpdateNotes.Text += Environment.NewLine;
+                richTextBoxUpdateNotes.Text += Environment.NewLine;
+            }
         }
+
+        private void buttonClose_Click(object sender, EventArgs e) => this.Close();
     }
 }

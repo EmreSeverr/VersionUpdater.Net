@@ -35,6 +35,7 @@ namespace VersionUpdater.Net.Helpers.Forms
             this.buttonUpdateLater = new System.Windows.Forms.Button();
             this.labelUpdateMessage = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelViewUpdateNotes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,10 +73,17 @@ namespace VersionUpdater.Net.Helpers.Forms
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // labelViewUpdateNotes
+            // 
+            resources.ApplyResources(this.labelViewUpdateNotes, "labelViewUpdateNotes");
+            this.labelViewUpdateNotes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelViewUpdateNotes.Name = "labelViewUpdateNotes";
+            // 
             // UpdateMessageForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelViewUpdateNotes);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelUpdateMessage);
             this.Controls.Add(this.buttonUpdateLater);
@@ -85,6 +93,7 @@ namespace VersionUpdater.Net.Helpers.Forms
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -95,5 +104,6 @@ namespace VersionUpdater.Net.Helpers.Forms
         public System.Windows.Forms.Button buttonUpdateLater;
         public System.Windows.Forms.Label labelUpdateMessage;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label labelViewUpdateNotes;
     }
 }

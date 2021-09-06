@@ -126,4 +126,7 @@
   <data name="labelUpdateMessage.Text" xml:space="preserve">
     <value>Update Available</value>
   </data>
+  <data name="labelViewUpdateNotes.Text" xml:space="preserve">
+    <value>Update Notes</value>
+  </data>
 </root>

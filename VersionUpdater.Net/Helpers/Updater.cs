@@ -1,5 +1,6 @@
 ﻿using Octokit;
 using System;
+using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace VersionUpdater.Net.Helpers
         /// </summary>
         /// <param name="updaterConAction"></param>
         /// <returns></returns>
-        public static async Task ApplyVersionUpdaterAsync(Action<VersionUpdaterProps> updaterConAction)
+        public static async Task<List<string>> ApplyVersionUpdaterAsync(Action<VersionUpdaterProps> updaterConAction)
         {
             VersionUpdaterProps updaterCon = new();
 
@@ -31,10 +32,12 @@ namespace VersionUpdater.Net.Helpers
 
             updaterCon.Version = Version.Parse(System.Windows.Forms.Application.ProductVersion);
 
+            List<string> updateNotes = new();
+
             if (CheckNetworkConnection())
             {
                 IVersionService versionService = new VersionService(updaterCon);
-                await versionService.CheckHaveUpdateAsync().ConfigureAwait(false);
+                updateNotes = await versionService.CheckHaveUpdateAsync().ConfigureAwait(false);
 
                 if (updaterCon.ScheduleConfig != null)
                 {
@@ -45,6 +48,8 @@ namespace VersionUpdater.Net.Helpers
                     await cronJobUpdate.StartAsync(new CancellationToken()).ConfigureAwait(false);
                 }
             }
+
+            return updateNotes;
         }
 
         /// <summary>
