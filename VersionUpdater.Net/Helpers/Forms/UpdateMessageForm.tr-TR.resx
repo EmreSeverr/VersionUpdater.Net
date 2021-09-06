@@ -90,19 +90,13 @@
   <data name="labelViewUpdateNotes.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 9.75pt</value>
   </data>
-  <data name="labelViewUpdateNotes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 309</value>
-  </data>
   <data name="labelViewUpdateNotes.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 15</value>
-  </data>
-  <data name="labelViewUpdateNotes.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
   </data>
   <data name="labelViewUpdateNotes.Text" xml:space="preserve">
     <value>Güncelleme Notları</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>278, 335</value>
+    <value>278, 353</value>
   </data>
 </root>

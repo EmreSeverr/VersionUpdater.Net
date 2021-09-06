@@ -41,6 +41,7 @@ namespace VersionUpdater.Net.Helpers.Forms
             this.richTextBoxUpdateNotes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.richTextBoxUpdateNotes, "richTextBoxUpdateNotes");
             this.richTextBoxUpdateNotes.Name = "richTextBoxUpdateNotes";
+            this.richTextBoxUpdateNotes.ReadOnly = true;
             // 
             // labelUpdateMessage
             // 
