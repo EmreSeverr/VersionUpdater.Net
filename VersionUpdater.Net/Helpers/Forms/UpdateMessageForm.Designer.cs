@@ -36,7 +36,6 @@ namespace VersionUpdater.Net.Helpers.Forms
             this.labelUpdateMessage = new System.Windows.Forms.Label();
             this.labelViewUpdateNotes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.ClientSize = new System.Drawing.Size(285, 337);
             this.SuspendLayout();
             // 
             // pictureBox1

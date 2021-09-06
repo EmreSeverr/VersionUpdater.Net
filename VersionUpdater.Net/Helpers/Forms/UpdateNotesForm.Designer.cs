@@ -51,6 +51,7 @@ namespace VersionUpdater.Net.Helpers.Forms
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClose.ForeColor = System.Drawing.Color.White;
             resources.ApplyResources(this.buttonClose, "buttonClose");
             this.buttonClose.Name = "buttonClose";
