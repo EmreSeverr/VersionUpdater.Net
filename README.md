@@ -90,7 +90,7 @@ static async Task Main()
 
 If you have published a new update and you force the update to the user, the page on the right is displayed, if you do not, the page on the left is displayed.
 
-Non-Mandatory update             |  Mandatory update
+Mandatory Update             |  Non-Mandatory Update
 :-------------------------:|:-------------------------:
 <img src="https://github.com/EmreSeverr/VersionUpdater.Net/blob/master/VersionUpdater.Net/Resources/UpdateReqired.png" height="450" style="float:left;"> | <img src="https://github.com/EmreSeverr/VersionUpdater.Net/blob/master/VersionUpdater.Net/Resources/UpdateNotReqired.png" height="450" style="float:left;">
 
@@ -112,6 +112,6 @@ Example:
 </PropertyGroup>
 ```
 
-And update notes pages looks like this :
+And update note pages looks like this :
 
 <img src="https://github.com/EmreSeverr/VersionUpdater.Net/blob/master/VersionUpdater.Net/Resources/UpdateNotes.png" height="450" style="float:left;">
