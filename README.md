@@ -23,6 +23,7 @@ Dependencies :
 ### Features
 - Checks for updates at each startup.
 - Checks for updates at runtime. (Optional.)
+- Update notes page for user. (Version 2.0.0 and later.)
 - Publish an update as mandatory or non-mandatory.
 - Turkish and English language supported. (For the update page.)
 
@@ -37,6 +38,8 @@ Just change the variable named "PROJECT_PATH" in the environment.
 
 Example:
 > PROJECT_PATH: VersionUpdater.Net.Sample/VersionUpdater.Net.Sample.csproj
+> 
+> REPOSITORY: "EmreSeverr/VersionUpdater.Net.Sample"
 
 Then your project *.csproj file, you must enter "Version" information and "UpdateRequired" information.
 
@@ -94,3 +97,21 @@ Non-Mandatory update             |  Mandatory update
 ##### So to publish the update, all you have to do is increase the version and push github. :blush:
 
 However, you can look at my sample [project](https://github.com/EmreSeverr/VersionUpdater.Net.Sample) and download and try the [releases](https://github.com/EmreSeverr/VersionUpdater.Net.Sample/releases) I have published.
+
+#### For Version 2.0.0 And Later:
+- Added the update notes page.
+
+To add an update note, you must enter "UpdateDescription" information in "PropertyGroup". If you want to enter more than one update note, you can divide them with the '#' character.
+
+Example:
+```
+<PropertyGroup>
+...
+    <UpdateDescription>New Update.#New Release.#New Version.</UpdateDescription>
+...
+</PropertyGroup>
+```
+
+And update notes pages looks like this :
+
+<img src="https://github.com/EmreSeverr/VersionUpdater.Net/blob/master/VersionUpdater.Net/Resources/UpdateNotes.png" height="450" style="float:left;">
