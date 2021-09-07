@@ -112,6 +112,8 @@ Example:
 </PropertyGroup>
 ```
 
+> If you do not enter an update note, "UpdateNotes" will not visible on the update page.
+
 And update note page looks like this :
 
 <img src="https://github.com/EmreSeverr/VersionUpdater.Net/blob/master/VersionUpdater.Net/Resources/UpdateNotes.png" height="450" style="float:left;">
