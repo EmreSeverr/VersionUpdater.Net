@@ -112,6 +112,6 @@ Example:
 </PropertyGroup>
 ```
 
-And update note pages looks like this :
+And update note page looks like this :
 
 <img src="https://github.com/EmreSeverr/VersionUpdater.Net/blob/master/VersionUpdater.Net/Resources/UpdateNotes.png" height="450" style="float:left;">
