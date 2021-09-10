@@ -1,4 +1,4 @@
-name: "Create Nuget Package"
+name: "Nuget ci"
 
 on:
  push:
