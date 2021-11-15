@@ -12,7 +12,8 @@
 Performs automatic updating for .NET forms projects using github actions.
 
 Supported versions :
-- .Net 5.0.0
+- .Net 5.0
+- .Net 6.0 (>= 6.0)
 
 Dependencies :
 - Cronos (>= 0.7.1)
